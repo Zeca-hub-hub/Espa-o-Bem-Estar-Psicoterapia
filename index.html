@@ -139,11 +139,20 @@
     padding: 16px 0;
   }
   .brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-family: var(--font-display);
     font-size: 1.22rem;
     color: var(--forest-deep);
     text-decoration:none;
     letter-spacing: .2px;
+  }
+  .brand-logo{
+    height: 48px;
+    width: auto;
+    border-radius: 4px;
+    object-fit: contain;
   }
   .brand strong{ font-weight: 700; }
   .nav-links{
@@ -316,7 +325,10 @@
 
 <header class="site">
   <div class="wrap nav">
-    <a class="brand" href="#topo"><strong>Espaço Bem Estar</strong> Psicoterapia</a>
+    <a class="brand" href="#topo">
+      <img src="placa.jpg" alt="Espaço Bem Estar - Placa" class="brand-logo">
+      <span><strong>Espaço Bem Estar</strong> Psicoterapia</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#abordagem">Abordagem</a></li>
@@ -428,5 +440,3 @@
 
 </body>
 </html>
-
-```
