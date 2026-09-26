@@ -1,11 +1,26 @@
+Aqui está o procedimento para subir as fotos no GitHub e o código HTML completo e atualizado.
+
+---
+
+### Como subir as fotos no GitHub (Passo a Passo)
+
+1. No seu repositório no **GitHub**, certifique-se de estar na pasta raiz (onde fica o arquivo `index.html`).
+2. Clique no botão **Add file** (no canto superior direito da lista de arquivos) e escolha **Upload files**.
+3. Arraste as duas fotos que enviou aqui para a área de upload ou clique para selecionar do seu computador.
+4. **MUITO IMPORTANTE:** Renomeie o arquivo da foto da Dra. sentada na mesa para **`foto1.jpg`** e o da foto dela em pé para **`foto2.jpg`** (tudo em minúsculo e sem espaços).
+5. Na parte inferior, clique no botão verde **Commit changes**.
+
+---
+
+### Código HTML/CSS Completo e Atualizado
+
+Substitua todo o conteúdo do seu arquivo `index.html` pelo código abaixo:
+
+```html
 <!DOCTYPE html>
 <!--
   Espaço Bem Estar Psicoterapia — single-file marketing site
   Client: Eliza Barbo (psychotherapist), Brazil
-  Content language: Portuguese (Brazil). Code comments: English.
-  Built as one self-contained HTML file (CSS + JS inline, images as base64)
-  so it can be dropped straight into the "Atoms" site tool.
-  Palette: forest green + cream + warm bronze accent (mirrors the client's own flyer).
 -->
 <html lang="pt-BR">
 <head>
@@ -26,7 +41,7 @@
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- ===== SEO: structured data for a local health/therapy business ===== -->
+<!-- ===== SEO: structured data ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -188,7 +203,6 @@
   .hero-actions{ display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top: 28px; }
   .hero-note{ font-size:.92rem; color: var(--ink-soft); }
   
-  /* Redimensionamento e ajuste das imagens */
   .hero-flyer{
     position:relative;
     border-radius: 6px;
@@ -197,7 +211,7 @@
     margin: 0 auto;
     box-shadow: 0 30px 60px -25px rgba(22,60,46,.45), 0 0 0 1px rgba(22,60,46,.06);
   }
-  .hero-flyer img{ width:100%; height:auto; display:block; }
+  .hero-flyer img{ width:100%; height:auto; display:block; object-fit: cover; }
 
   .about{ padding: 70px 0; }
   .about-grid{
@@ -207,9 +221,10 @@
   .about-photo{
     border-radius: 6px; overflow:hidden;
     box-shadow: 0 20px 40px -22px rgba(22,60,46,.4);
-    max-width: 360px;
+    max-width: 380px;
     margin: 0 auto;
   }
+  .about-photo img{ width: 100%; height: auto; display: block; }
   .about-copy .kicker{
     color: var(--bronze-deep);
     font-weight:700;
@@ -346,13 +361,16 @@
         </div>
       </div>
       <div class="hero-flyer">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAcFBQYFBAcGBgYIBwcICxILCwoKCxYPEA0SGhYbGhkWGRgcICgiHB4mHhgZIzAkJiorLS4tGyIyNTEsNSgsLSz/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCALuA+gDASIAAhEBAxEB/8QAHQABAAEFAQEBAAAAAAAAAAAAAAcBBAUGCAIDCf/EAFsQAAEDAwEFAggICggEBQMACwEAAgMEBREGBxIhMVETQQgUImFxgZGTFRYXMlJVobEjNE constitutional image base64 snippet..." alt="Apresentação do Espaço Bem Estar Psicoterapia">
+        <img src="foto1.jpg" alt="Dra. Eliza Barbo no consultório">
       </div>
     </div>
   </section>
 
   <section class="about" id="sobre">
     <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="foto2.jpg" alt="Dra. Eliza Barbo">
+      </div>
       <div class="about-copy">
         <div class="kicker">SOBRE A PROFISSIONAL</div>
         <h2>Eliza Barbo</h2>
@@ -428,3 +446,5 @@
 
 </body>
 </html>
+
+```
